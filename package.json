@@ -1,0 +1,88 @@
+{
+  "name": "mousquetaires-theme",
+  "displayName": "Mousquetaires Football 🏈",
+  "description": "L'extension officielle des Mousquetaires de Châtenay-Malabry : thème du club, accueil personnalisé et profil de joueur dans VS Code.",
+  "version": "0.0.1",
+  "publisher": "mousquetaires-chatenay",
+  "icon": "media/logomous.png",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CISSE07/mousquetaires-theme.git"
+  },
+  "keywords": [
+    "football",
+    "mousquetaires",
+    "chatenay-malabry",
+    "theme",
+    "club"
+  ],
+  "galleryBanner": {
+    "color": "#003366",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "^1.124.0"
+  },
+  "categories": [
+    "Themes",
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "mousquetaires.welcome",
+        "title": "Mousquetaires : Afficher l'accueil 🏈"
+      },
+      {
+        "command": "mousquetaires.applyTheme",
+        "title": "Mousquetaires : Activer le thème du club"
+      },
+      {
+        "command": "mousquetaires.reset",
+        "title": "Mousquetaires : Réinitialiser mon profil"
+      }
+    ],
+    "themes": [
+      {
+        "label": "Mousquetaires",
+        "uiTheme": "vs-dark",
+        "path": "./themes/mousquetaires-color-theme.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "npm run check-types && npm run lint && node esbuild.js",
+    "watch": "npm-run-all -p watch:*",
+    "watch:esbuild": "node esbuild.js --watch",
+    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
+    "package": "npm run check-types && npm run lint && node esbuild.js --production",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "24.x",
+    "@types/vscode": "^1.124.0",
+    "@vscode/test-cli": "^0.0.15",
+    "@vscode/test-electron": "^3.0.0",
+    "esbuild": "^0.28.1",
+    "eslint": "^10.5.0",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.61.1"
+  },
+  "overrides": {
+    "diff": "^8.0.4",
+    "serialize-javascript": "^7.0.6"
+  }
+}
