@@ -13,4 +13,4 @@ vsc-extension-quickstart.md
 **/*.ts
 **/.vscode-test.*
 media/**
-!media/logomous.png
+!media/logomous-removebg-preview.png

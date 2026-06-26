@@ -4,7 +4,7 @@
   "description": "L'extension officielle des Mousquetaires de Châtenay-Malabry : thème du club, accueil personnalisé et profil de joueur dans VS Code.",
   "version": "0.0.1",
   "publisher": "mousquetaires-chatenay",
-  "icon": "media/logomous.png",
+  "icon": "media/logomous-removebg-preview.png",
   "license": "MIT",
   "repository": {
     "type": "git",

@@ -56,7 +56,7 @@ function openWelcome(context: vscode.ExtensionContext) {
   );
 
   const logoUri = welcomePanel.webview.asWebviewUri(
-    vscode.Uri.joinPath(context.extensionUri, "media", "logomous.png")
+    vscode.Uri.joinPath(context.extensionUri, "media", "logomous-removebg-preview.png")
   );
 
   welcomePanel.webview.html = getWelcomeHtml(
