@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="media/logomous.png" alt="Logo Mousquetaires" width="200" />
+  <img src="media/logomous-removebg-preview.png" alt="Logo Mousquetaires" width="200" />
 </p>
 
 <h1 align="center">Mousquetaires Football 🏈</h1>
